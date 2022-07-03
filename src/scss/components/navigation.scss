@@ -1,0 +1,43 @@
+.navigation {
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+	background-color: $blackTrans;
+	text-align: center;
+	//border: 4px solid $grey;
+	min-height: 100%;
+
+	.nav-title {
+		font-size: 250%;
+		color: $primary;
+		opacity: 0%;
+		margin: 10px 10px 0 10px;
+		animation: 1s cubic-bezier(0.3, 0, 0.7, 1) 0.5s forwards appearOpacity;
+	}
+
+	.nav-list {
+		margin: auto 0px auto 0px;
+	}
+	
+	.nav-link {
+		font-size: 150%;
+		opacity: 0%;
+		padding: 15px 15px 15px 15px;
+		animation: 1s cubic-bezier(0.3, 0, 0.7, 1) 1s forwards appearOpacity;
+		&:hover{
+			background-color: $primaryTrans;
+		}
+	}
+	
+	.activated {
+		color: $secondary;
+	}
+	
+	.desactivated {
+		color: black;
+	}
+
+	animation: 0.5s cubic-bezier(0.3, 0, 0.7, 1) widthGrowFromLeft;
+
+}
+

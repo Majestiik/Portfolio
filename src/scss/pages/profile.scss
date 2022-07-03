@@ -1,0 +1,9 @@
+.profile {
+	display: flex;
+	align-items: center;
+	padding-left: 3000px;
+	img {
+		height:100%;
+	}
+	animation: 1s cubic-bezier(0.3, 0, 0.7, 1) 0s forwards slideFromRight;
+}
