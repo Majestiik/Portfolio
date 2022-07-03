@@ -1,4 +1,6 @@
 .navigation {
+	position: relative;
+	left: -240px;
 	display: flex;
 	flex-direction: column;
 	list-style: none;
@@ -6,13 +8,25 @@
 	text-align: center;
 	//border: 4px solid $grey;
 	min-height: 100%;
+	transition-property: left;
+	transition-duration: 0.5s;
+	transition-timing-function: cubic-bezier(0.3, 0, 0.7, 1);
+
+	.nav-button {
+		position: relative;
+		left: 100%;
+		top: 450px;
+		width: 50px;
+		height: 50px;
+		font-size: 2.5rem;
+		opacity: 60%;
+		//background-color: $blackTrans;
+	}
 
 	.nav-title {
 		font-size: 250%;
 		color: $primary;
-		opacity: 0%;
 		margin: 10px 10px 0 10px;
-		animation: 1s cubic-bezier(0.3, 0, 0.7, 1) 0.5s forwards appearOpacity;
 	}
 
 	.nav-list {
@@ -21,9 +35,7 @@
 	
 	.nav-link {
 		font-size: 150%;
-		opacity: 0%;
 		padding: 15px 15px 15px 15px;
-		animation: 1s cubic-bezier(0.3, 0, 0.7, 1) 1s forwards appearOpacity;
 		&:hover{
 			background-color: $primaryTrans;
 		}
@@ -37,7 +49,18 @@
 		color: black;
 	}
 
-	animation: 0.5s cubic-bezier(0.3, 0, 0.7, 1) widthGrowFromLeft;
+	&:hover {
+		//animation: 0.5s cubic-bezier(0.3, 0, 0.7, 1) widthGrowFromLeft;
+		left: 0px;
+
+		.nav-title {
+			left: 0px;
+		}
+
+		.nav-link {
+			left: 0px;
+		}
+	}
 
 }
 

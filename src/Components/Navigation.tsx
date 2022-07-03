@@ -10,6 +10,7 @@ export const Navigation = (props: any) => {
 	return (
 		<nav>
 			<ul className="navigation">
+				<div className="nav-button">➡</div>
 				<li className="nav-title">Developper</li>
 				<li className="nav-title">Identity</li>
 				<li className="nav-list">
